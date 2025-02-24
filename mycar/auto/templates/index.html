@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars - My Cars Website</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav ul li {
+            display: inline-block;
+            margin-right: 1rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+        }
+        
+        .car-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            background-color: #fff;
+        }
+        
+        .car-card img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .featured-cars {
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-direction: column;
+            display: flex;
+        }
+        
+        .car-listings {
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-direction: column;
+            display: flex;
+        }
+    </style>
+    {% load static %}
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to My Cars Website</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'cars' %}">Cars</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="featured-cars">
+            <h2>Featured Cars</h2>
+            <div class="car-card">
+                <img src="{% static 'images/car1.jpg' %}" alt="Car 1">
+                <p><strong>Koenigsegg Jesko</strong></p>
+                <p>A high-performance sports car that combines speed and style.</p>
+            </div>
+            <div class="car-card">
+                <img src="{% static 'images/car2.jpg' %}" alt="Car 2">
+                <p><strong>Bugatti Tourbillon</strong></p>
+                <p>Luxury and performance in one spectacular package.</p>
+            </div>
+            <!-- Add more car cards as needed -->
+        </section>
+
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Cars Website. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

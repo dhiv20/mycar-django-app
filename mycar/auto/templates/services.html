@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - My Cars Website</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav ul li {
+            display: inline-block;
+            margin-right: 1rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+        }
+        
+        .service {
+            margin-bottom: 2rem;
+        }
+        
+        .service h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .service p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Our Services</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'cars' %}">Cars</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="services">
+            <div class="service">
+                <h3>Car Sales</h3>
+                <p>We offer a wide range of high-end cars for sale. Our collection includes luxury and sports cars from top manufacturers around the world.</p>
+            </div>
+            <div class="service">
+                <h3>Financing</h3>
+                <p>Get the best financing options for your new car. We work with leading financial institutions to offer you competitive rates and flexible terms.</p>
+            </div>
+            <div class="service">
+                <h3>Maintenance & Repairs</h3>
+                <p>Our expert technicians are here to help keep your car in top condition. From regular maintenance to major repairs, we provide comprehensive services to ensure your car's longevity.</p>
+            </div>
+            <div class="service">
+                <h3>Custom Modifications</h3>
+                <p>Personalize your car with custom modifications. We offer a range of services to enhance the performance and aesthetics of your vehicle.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Cars Website. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
+
