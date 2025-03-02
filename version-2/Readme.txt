@@ -1,0 +1,1 @@
+This version has added feature of saving customer information from contact.html page. Also, displaying a thank you page after customer fills the contact form.
