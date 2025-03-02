@@ -1,0 +1,24 @@
+#This is to create replica pods. We use labels to mark that these resources are used for a particaular app/sw etc.
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mycar-deploy
+  labels:
+   app: mycar-python-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mycar-python-app
+  template:
+    metadata:
+      labels:  #this label under template is imp as it is referred by service.yml when pods gets recreated, instead of looking for ip .
+        app: mycar-python-app
+    spec:
+      containers:
+      - name: mycar-cont
+        image: d2bdocker/mycar-app:v1  #image that we pushed to dockerhub
+        ports:
+        - containerPort: 8000  #in dockerfile we mentioned app to run on port 8000 in container#in dockerfile we mentioned app to run on port 8000 in containerV
+

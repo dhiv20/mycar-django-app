@@ -1,0 +1,17 @@
+    apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    metadata:
+      name: example-ingress
+    spec:
+      ingressClassName: nginx
+      rules:
+        - host: mycar.com          #this will be used to open webpage on browser
+          http:
+            paths:
+              - path: /
+                pathType: Prefix
+                backend:
+                  service:
+                    name: mycar-service
+                    port:
+                      number: 8000
